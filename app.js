@@ -1,31 +1,35 @@
-//Muutujad
-/*
-vaatame
-kuidas
-luua ja aksutada muutujad
-*/
+// Andmetyybid
 
-let name = 'Kadi Tamm';
+// Primitives
 
-name = "Kadi Lepp";
+// tekst
+const name = 'Kadi Tamm'
 
-let firstName = 'Kadi';
-let $ = 'dollar';
+//numbrid
+const age = 15;
+const height = 1.75;
 
-//muutuja, mis on konstante
-const surName = 'Tamm';
-//surName = 'Lepp';
+// toevaartused true ja false
+const hasKids = false;
 
-const numbers = [1, 2, 3, 4];
-numbers.push(6);
+// null
+const hasAirplane = null;
 
-// objektid
+// undefined
+let test;
+
+// Reference types
+
+// masiiv
+const hobbies = ['music', 'sport'];
+
+//object
 const person = {
 	name: 'Kadi',
-	age: '20'
+	age: 15
 };
 
-person.age = 21;
+const today = new Date();
 
-console.log(person);
-console.log(numbers);
+console.log(today);
+console.log(typeof today);
