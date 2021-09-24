@@ -9,7 +9,23 @@ let name = 'Kadi Tamm';
 
 name = "Kadi Lepp";
 
-let fisrtName = 'Kadi';
-let $ = 'dollar'
+let firstName = 'Kadi';
+let $ = 'dollar';
 
-console.log(name);
+//muutuja, mis on konstante
+const surName = 'Tamm';
+//surName = 'Lepp';
+
+const numbers = [1, 2, 3, 4];
+numbers.push(6);
+
+// objektid
+const person = {
+	name: 'Kadi',
+	age: '20'
+};
+
+person.age = 21;
+
+console.log(person);
+console.log(numbers);
