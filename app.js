@@ -1,48 +1,49 @@
-let color = 'green'
-
-switch(color){
-	case 'red':
-		console.log('STOP!')
-		break
-	case 'yellow':
-		console.log('Attention')
-		break
-	case 'green':
-		console.log('Go!')
-		break
-	default:
-		console.log("This color is not allowed")
-		break
+// for tsükkel
+for(let i = 0; i < 10; i++){
+	//if(i % 2 === 0)
+		//console.log(i)
 }
 
-// loo kuupäeva objekt
-// nädalapäeva numbri järgi väljasta mis nädala
-// päevaga on tegu - eesti keeles
-// testi kõik päevad
-let day= new Date('13/04/2020')
-let daynr = day.getDay()
-// console.log(daynr)
+for(let i = 0; i < 10; i++){
+		//if(i === 5) break
+		if(i === 5) continue
+		console.log(i)
+}
 
-switch(daynr){
- 	case 0:
- 		console.log("Pühapäev")
- 		break
- 	case 1:
- 		console.log("Esmaspäev")
- 		break
- 	case 2:
- 		console.log("Teisipäev")
- 		break
- 	case 3:
- 		console.log("Kolmapäev")
- 		break
- 	case 4:
- 		console.log("Neljapäev")
- 		break
- 	case 5:
- 		console.log("Reede")
- 		break
- 	case 6:
- 		console.log("Laupäev")
- 		break
- }
+//while
+let i = 0
+while (i < 10){
+	console.log(i)
+	i++
+}
+
+// do while
+console.log('do-while')
+
+let j = 0
+do{
+	console.log(j)
+	j++
+} while(j < 10)
+
+// tsükklid ja massiivid
+const cars = ['Ford', 'Honda', 'Toyota']
+for(let i = 0; i < cars.lenght; i++){
+	console.log(cars[i])
+}
+for(let i = 0; i < cars.lenght; i++){
+	console.log
+}
+// foreach-iga
+cars.forEach(function(car, index){
+	console.log(`${index} - ${car}`);
+})
+
+const person = {
+	firstname: 'Kadi',
+	lastname: 'Tamm',
+	age: 25
+}
+for(let element in person){
+	console.log(`${element} - ${person[element]}`)
+}
