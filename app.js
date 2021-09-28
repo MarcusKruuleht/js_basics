@@ -1,46 +1,28 @@
-// deklareerimine
-function greeting(firstname, lastname){
-	/*
-	if(typeof firstname === 'undefined'){
-		firstname = 'Kadi'
-	}
-	if(typeof lastname === 'undefined'){
-		lastname = 'Tamm'
-	}
-	*/
-	return 'Tere, ' + firstname + ' ' + lastname
-}
-// kasitamine
-greet = greeting('a','b')
-console.log(greet)
+let val;
 
-// f-on defineeritud nagu const
-const square = function(number = 3){
-	return Math.pow(number, 2)
-}
-console.log(square())
+val = document;
+val = document.all;
+val = document.all[4];
+val = document.all.lenght;
+val = document.head;
+val = document.body;
+val = document.doctype;
+val = document.domain;
+val = document.URL;
+val = document.characterSet;
+val = document.contentType;
 
-//
-/*(function(){
-	console.log('funktison is ran');
-})();
-(function(name){
-	console.log('tere, ' + name);
-})('aaaaaaaaaaa');
-*/
-// f-oni 
-const todoList = {
-	add: function(task){
-		console.log('Task is added')
-	},
-	edit: function(oldtask, newtask){
-		console.log(`${oldtask} is changed to ${newtask}`)
-	},
-	delete: function(task){
-		console.log(task + ' is delted')
-	}
-}
+val = document.forms;
+val = document.forms[0];
+val = document.forms[0].method;
+val = document.forms[0].action;
+val = document.forms[0].id;
+val = document.links;
+val = document.links[1];
+val = document.links[1].id;
+val = document.links[1].className;
 
-todoList.add('Study JS')
-todoList.edit('Study JS', 'Study TypeScript')
-todoList.delete('Study JS')
+val = document.scripts;
+val = document.scripts[1].getAttribute('src');
+
+console.log(val);
