@@ -1,49 +1,46 @@
-// for tsükkel
-for(let i = 0; i < 10; i++){
-	//if(i % 2 === 0)
-		//console.log(i)
+// deklareerimine
+function greeting(firstname, lastname){
+	/*
+	if(typeof firstname === 'undefined'){
+		firstname = 'Kadi'
+	}
+	if(typeof lastname === 'undefined'){
+		lastname = 'Tamm'
+	}
+	*/
+	return 'Tere, ' + firstname + ' ' + lastname
+}
+// kasitamine
+greet = greeting('a','b')
+console.log(greet)
+
+// f-on defineeritud nagu const
+const square = function(number = 3){
+	return Math.pow(number, 2)
+}
+console.log(square())
+
+//
+/*(function(){
+	console.log('funktison is ran');
+})();
+(function(name){
+	console.log('tere, ' + name);
+})('aaaaaaaaaaa');
+*/
+// f-oni 
+const todoList = {
+	add: function(task){
+		console.log('Task is added')
+	},
+	edit: function(oldtask, newtask){
+		console.log(`${oldtask} is changed to ${newtask}`)
+	},
+	delete: function(task){
+		console.log(task + ' is delted')
+	}
 }
 
-for(let i = 0; i < 10; i++){
-		//if(i === 5) break
-		if(i === 5) continue
-		console.log(i)
-}
-
-//while
-let i = 0
-while (i < 10){
-	console.log(i)
-	i++
-}
-
-// do while
-console.log('do-while')
-
-let j = 0
-do{
-	console.log(j)
-	j++
-} while(j < 10)
-
-// tsükklid ja massiivid
-const cars = ['Ford', 'Honda', 'Toyota']
-for(let i = 0; i < cars.lenght; i++){
-	console.log(cars[i])
-}
-for(let i = 0; i < cars.lenght; i++){
-	console.log
-}
-// foreach-iga
-cars.forEach(function(car, index){
-	console.log(`${index} - ${car}`);
-})
-
-const person = {
-	firstname: 'Kadi',
-	lastname: 'Tamm',
-	age: 25
-}
-for(let element in person){
-	console.log(`${element} - ${person[element]}`)
-}
+todoList.add('Study JS')
+todoList.edit('Study JS', 'Study TypeScript')
+todoList.delete('Study JS')
