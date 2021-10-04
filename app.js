@@ -2,12 +2,25 @@
 const form = document.querySelector('form');
 const taskInput = document.querySelector('#task');
 
-form.addEventListener('submit', runEvent);
+// keyboard
+
+//task.addEventListener('keydown', runEvent);
+//task.addEventListener('keyup', runEvent);
+//task.addEventListener('keypress', runEvent);
+
+//focus & blur
+//task.addEventListener('focus', runEvent);
+//task.addEventListener('blur', runEvent);
+
+// cut & paste
+task.addEventListener('cut', runEvent);
+task.addEventListener('paste', runEvent);
+
+// imput by symbol
+task.addEventListener('input', runEvent);
 
 function runEvent(e){
 	console.log(`Event is ${e.type}`);
-
-	console.log(taskInput.value);
-	taskInput.value = ``;
-	e.preventDefault();
+	// something to do
+	console.log(e.target.value);
 }
