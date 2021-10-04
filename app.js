@@ -1,13 +1,25 @@
-// event elements
-const list = document.querySelector('ul');
 
-console.log(list);
+const form = document.querySelector('form')
+const taskInput = document.querySelector('#task');
+const taskList = document.querySelector('ul');
 
-// click by symbol
-list.addEventListener('click', runEvent);
 
-function runEvent(e){
-	console.log(`Event is ${e.type}`);
-	// something to do
-	console.log(e.target.value);
+form.addEventListener('submit', addTask);
+
+function addTask(e) {
+	
+	const li = document.createElement('li');
+	li.className = 'collection-item';
+	li.appendChild(document.createTextNode(taskInput.value));
+		
+
+	const link = document.createElement('a');
+	link.className = 'secondary-content';
+	link.appendChild(document.createTextNode('X'))
+	link.setAttribute('href', '#');
+	li.appendChild(link);
+
+	taskList.appendChild(li);
+	taskInput.value = ``;
+	e.preventDefault();
 }
