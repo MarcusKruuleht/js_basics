@@ -1,17 +1,13 @@
-let val;
-// elementide loomine
-const li = document.createElement('li');
-// klassi määramine
-li.className = 'collection-item';
-// teksi lisamine
-li.appendChild(document.createTextNode('Study JS element creation'));
+// event elements
+const form = document.querySelector('form');
+const taskInput = document.querySelector('#task');
 
-// kodune töö
-// loo link X näitamiseks
-// ja lisa li sisse
-// siin peab olema sinu kood
+form.addEventListener('submit', runEvent);
 
+function runEvent(e){
+	console.log(`Event is ${e.type}`);
 
-// lisame li element ul-sse
-const ul = document.querySelector('ul');
-ul.appendChild(li);
+	console.log(taskInput.value);
+	taskInput.value = ``;
+	e.preventDefault();
+}
